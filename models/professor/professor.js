@@ -1,5 +1,4 @@
-import moment from 'moment'
-import mongoose, { mongo } from 'mongoose'
+import mongoose from 'mongoose'
 
 // Create Schema  //데이터모델을 스키마라 함
 const ProfessorSchema = new mongoose.Schema({
@@ -18,6 +17,6 @@ const ProfessorSchema = new mongoose.Schema({
     }
 });
 
-const Professor = mongoose.model("professor", UserSchema);
+const Professor = mongoose.model("professor", ProfessorSchema);
 
 export default Professor;
