@@ -15,30 +15,9 @@ const ProfessorSchema = new mongoose.Schema({
     phone_number: {
         type : String,
         required : true,
-    },
-    in_school_role : {
-        type : String,
-        enum : ["MainJuin", "Subjuin", "User"],
-        default : "User",
-    },
-    out_school_role : {
-        type : Date,
-        default : moment().format("YYYY-MM-DD hh:mm:ss")
-    },
-    thesis_performance : {
-
-    },
-    patent_perfromance : {
-
-    },
-    academic_activities : {
-        
-    },
-    awards: {
-
     }
 });
 
-const User = mongoose.model("user", UserSchema);
+const Professor = mongoose.model("professor", UserSchema);
 
-export default User;
+export default Professor;
