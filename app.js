@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import cors from 'cors'
 import morgan from 'morgan'
 import ProfessorData from './routes/professor';
+import PatnetData from './routes/patent'
 
 const app = express()
 const {MONGO_URL} = config
@@ -25,5 +26,6 @@ mongoose.connect(MONGO_URL, {
 
 app.get('/');
 app.use('/api/professor', ProfessorData);
+app.use('/api/patent', PatnetData);
 
 export default app;
