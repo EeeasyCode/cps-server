@@ -5,22 +5,12 @@ const ResearchSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    korean_title: {
+    title: {
         type: String,
-        required: true
     },
-    english_title: {
+    organization: {
         type: String,
-        required: true
     },
-    korean_organization: {
-        type: String,
-        required: true
-    },
-    english_organization: {
-        type: String,
-        required: true
-    }
 })
 
 const Research = mongoose.model("research", ResearchSchema);
