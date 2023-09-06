@@ -8,6 +8,7 @@ import morgan from 'morgan'
 import ProfessorData from './routes/professor';
 import PatnetData from './routes/patent';
 import ResearchData from './routes/research';
+import TestData from './routes/test'
 
 const app = express()
 const {MONGO_URL} = config
@@ -29,5 +30,6 @@ app.get('/');
 app.use('/api/professor', ProfessorData);
 app.use('/api/patent', PatnetData);
 app.use('/api/research', ResearchData);
+app.use('/api/test', TestData);
 
 export default app;
